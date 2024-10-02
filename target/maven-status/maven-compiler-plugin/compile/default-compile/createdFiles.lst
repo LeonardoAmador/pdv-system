@@ -1,0 +1,8 @@
+connection\ConnectionFactory.class
+model\ProductSale.class
+model\Product.class
+model\Category.class
+model\SaleItem.class
+servlet\MainServlet.class
+model\Customer.class
+model\Sale.class
