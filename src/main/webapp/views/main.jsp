@@ -1,3 +1,4 @@
+<!-- main.jsp -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,20 +7,29 @@
     <title>Main Page</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    
+    <link href="${pageContext.request.contextPath}/css/custom.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1 class="text-center mt-4">Welcome to the Management System</h1>
-        <p>Select a section to manage:</p>
 
-        <ul class="list-group">
-            <li class="list-group-item"><a href="${pageContext.request.contextPath}/categories">Manage Categories</a></li>
-            <li class="list-group-item"><a href="${pageContext.request.contextPath}/products">Manage Products</a></li>
-            <li class="list-group-item"><a href="${pageContext.request.contextPath}/sales">Manage Sales</a></li>
-            <li class="list-group-item"><a href="${pageContext.request.contextPath}/customers">Manage Customers</a></li>
-        </ul>
+    <jsp:include page="/WEB-INF/jsp/header.jsp" />
+
+    <div class="d-flex">
+        <jsp:include page="/WEB-INF/jsp/sidebar.jsp" />
+
+        <jsp:include page="/WEB-INF/jsp/content.jsp" />
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const toggleButton = document.getElementById('sidebarToggle');
+
+        toggleButton.addEventListener('click', () => {
+            sidebar.classList.toggle('collapsed');
+        });
+    </script>
 </body>
 </html>
