@@ -1,7 +1,7 @@
 <nav id="sidebar" class="bg-dark collapsed">
     <ul class="nav flex-column">
         <li class="nav-item">
-            <a class="nav-link text-light" href="${pageContext.request.contextPath}/categories">
+            <a class="nav-link text-light" href="${pageContext.request.contextPath}/views/createCategory.jsp">
                 <i class="bi bi-list"></i> <span>Manage Categories</span>
             </a>
         </li>
